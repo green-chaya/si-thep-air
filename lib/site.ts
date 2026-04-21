@@ -10,7 +10,7 @@ export const SITE = {
   phone: "093-419-4553",
   phoneRaw: "+66934194553",
   lineId: "sithepair",
-  lineUrl: "https://line.me/R/ti/p/sithepair",
+  lineUrl: "https://line.me/ti/p/~sithepair",
   facebookUrl: "https://www.facebook.com/Srithepairservice?locale=th_TH",
   email: "sritepairservice2012@gmail.com",
   address: "957 ถ.คชเสนีย์ ต.สระกรวด อ.ศรีเทพ จ.เพชรบูรณ์ 67170",
