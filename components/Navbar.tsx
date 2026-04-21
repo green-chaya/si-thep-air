@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "#why", label: "ทำไมต้องเรา" },
   { href: "#process", label: "ขั้นตอน" },
   { href: "#works", label: "ผลงาน" },
+  { href: "#btu-calculator", label: "คำนวณ BTU" },
   { href: "#faq", label: "คำถาม" },
   { href: "#contact", label: "ติดต่อ" },
 ];
