@@ -32,47 +32,47 @@ const ROOM_TYPES: Array<{
   baselinePeople: number;
   icon: LucideIcon;
 }> = [
-  {
-    id: "bedroom",
-    label: "ห้องนอน",
-    sub: "ใช้พักผ่อน ไม่มีคนเยอะ",
-    btuPerSqm: 700,
-    baselinePeople: 2,
-    icon: Bed,
-  },
-  {
-    id: "living",
-    label: "ห้องนั่งเล่น",
-    sub: "รวมญาติ ดูทีวี",
-    btuPerSqm: 800,
-    baselinePeople: 4,
-    icon: Sofa,
-  },
-  {
-    id: "office",
-    label: "สำนักงาน",
-    sub: "ทำงาน มีอุปกรณ์",
-    btuPerSqm: 850,
-    baselinePeople: 4,
-    icon: Briefcase,
-  },
-  {
-    id: "kitchen",
-    label: "ครัว",
-    sub: "ความร้อนสูง",
-    btuPerSqm: 1000,
-    baselinePeople: 2,
-    icon: ChefHat,
-  },
-  {
-    id: "commercial",
-    label: "ร้านค้า/ร้านอาหาร",
-    sub: "คนเข้า-ออกบ่อย",
-    btuPerSqm: 900,
-    baselinePeople: 6,
-    icon: Building2,
-  },
-];
+    {
+      id: "bedroom",
+      label: "ห้องนอน",
+      sub: "ใช้พักผ่อน ไม่มีคนเยอะ",
+      btuPerSqm: 700,
+      baselinePeople: 2,
+      icon: Bed,
+    },
+    {
+      id: "living",
+      label: "ห้องนั่งเล่น",
+      sub: "รวมญาติ ดูทีวี",
+      btuPerSqm: 800,
+      baselinePeople: 4,
+      icon: Sofa,
+    },
+    {
+      id: "office",
+      label: "สำนักงาน",
+      sub: "ทำงาน มีอุปกรณ์",
+      btuPerSqm: 850,
+      baselinePeople: 4,
+      icon: Briefcase,
+    },
+    {
+      id: "kitchen",
+      label: "ครัว",
+      sub: "ความร้อนสูง",
+      btuPerSqm: 1000,
+      baselinePeople: 2,
+      icon: ChefHat,
+    },
+    {
+      id: "commercial",
+      label: "ร้านค้า/ร้านอาหาร",
+      sub: "คนเข้า-ออกบ่อย",
+      btuPerSqm: 900,
+      baselinePeople: 6,
+      icon: Building2,
+    },
+  ];
 
 const SUN_OPTIONS: Array<{
   id: SunExposure;
@@ -81,28 +81,28 @@ const SUN_OPTIONS: Array<{
   factor: number;
   icon: LucideIcon;
 }> = [
-  {
-    id: "low",
-    label: "น้อย",
-    hint: "ทิศเหนือ / มีเงาตลอดวัน",
-    factor: 0.9,
-    icon: SunDim,
-  },
-  {
-    id: "medium",
-    label: "ปานกลาง",
-    hint: "แสงเข้าบางช่วงเวลา",
-    factor: 1.0,
-    icon: SunMedium,
-  },
-  {
-    id: "high",
-    label: "มาก",
-    hint: "ทิศใต้-ตะวันตก แดดบ่ายเต็ม",
-    factor: 1.15,
-    icon: Sun,
-  },
-];
+    {
+      id: "low",
+      label: "น้อย",
+      hint: "ทิศเหนือ / มีเงาตลอดวัน",
+      factor: 0.9,
+      icon: SunDim,
+    },
+    {
+      id: "medium",
+      label: "ปานกลาง",
+      hint: "แสงเข้าบางช่วงเวลา",
+      factor: 1.0,
+      icon: SunMedium,
+    },
+    {
+      id: "high",
+      label: "มาก",
+      hint: "ทิศใต้-ตะวันตก แดดบ่ายเต็ม",
+      factor: 1.15,
+      icon: Sun,
+    },
+  ];
 
 /** ขนาดแอร์มาตรฐานในตลาดไทย (BTU) */
 const STANDARD_SIZES = [
@@ -215,18 +215,16 @@ export default function BtuCalculator() {
                         key={r.id}
                         type="button"
                         onClick={() => setRoomType(r.id)}
-                        className={`flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition ${
-                          active
+                        className={`flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition ${active
                             ? "border-brand-500 bg-brand-50 text-brand-700 ring-1 ring-brand-200"
                             : "border-ink-100 bg-white text-ink-700 hover:border-brand-200 hover:bg-brand-50/40"
-                        }`}
+                          }`}
                       >
                         <span
-                          className={`grid h-8 w-8 place-items-center rounded-lg ${
-                            active
+                          className={`grid h-8 w-8 place-items-center rounded-lg ${active
                               ? "bg-brand-600 text-white"
                               : "bg-ink-50 text-ink-500"
-                          }`}
+                            }`}
                         >
                           <Icon className="h-4 w-4" />
                         </span>
@@ -277,11 +275,10 @@ export default function BtuCalculator() {
                         key={s.id}
                         type="button"
                         onClick={() => setSun(s.id)}
-                        className={`flex flex-col items-center gap-1 rounded-xl border p-3 text-center transition ${
-                          active
+                        className={`flex flex-col items-center gap-1 rounded-xl border p-3 text-center transition ${active
                             ? "border-brand-500 bg-brand-50 text-brand-700 ring-1 ring-brand-200"
                             : "border-ink-100 bg-white text-ink-700 hover:border-brand-200 hover:bg-brand-50/40"
-                        }`}
+                          }`}
                       >
                         <Icon className="h-5 w-5" />
                         <span className="text-sm font-semibold">{s.label}</span>
@@ -369,8 +366,8 @@ export default function BtuCalculator() {
                 <p className="mt-1 text-xs text-white/80">
                   {hasResult
                     ? `เลือกรุ่นที่มี BTU ใกล้เคียง ${formatBtu(
-                        result.recommended,
-                      )} ขึ้นไป`
+                      result.recommended,
+                    )} ขึ้นไป`
                     : "กรอกขนาดห้องเพื่อคำนวณ"}
                 </p>
 
@@ -388,9 +385,8 @@ export default function BtuCalculator() {
                     {people > room.baselinePeople && (
                       <Row
                         k="คนเพิ่ม"
-                        v={`+${
-                          (people - room.baselinePeople) * 600
-                        } BTU`}
+                        v={`+${(people - room.baselinePeople) * 600
+                          } BTU`}
                       />
                     )}
                     {devices > 0 && (
@@ -411,7 +407,8 @@ export default function BtuCalculator() {
                 <p className="mt-1 text-xs text-ink-500">
                   ปรึกษาฟรี ประเมินหน้างานในพื้นที่บริการ
                 </p>
-                <div className="mt-3 flex flex-wrap gap-2">
+                {/* เปลี่ยน flex-wrap เป็น flex-col sm:flex-row */}
+                <div className="mt-3 flex flex-col sm:flex-row gap-2">
                   <a
                     href={`tel:${SITE.phoneRaw}`}
                     className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-ink-800"
@@ -502,17 +499,15 @@ function ToggleRow({
     <button
       type="button"
       onClick={() => onChange(!value)}
-      className={`flex items-start justify-between gap-3 rounded-xl border p-3 text-left transition ${
-        value
+      className={`flex items-start justify-between gap-3 rounded-xl border p-3 text-left transition ${value
           ? "border-brand-500 bg-brand-50 ring-1 ring-brand-200"
           : "border-ink-100 bg-white hover:border-brand-200 hover:bg-brand-50/40"
-      }`}
+        }`}
     >
       <div className="min-w-0">
         <div
-          className={`text-sm font-semibold ${
-            value ? "text-brand-700" : "text-ink-800"
-          }`}
+          className={`text-sm font-semibold ${value ? "text-brand-700" : "text-ink-800"
+            }`}
         >
           {title}
         </div>
@@ -523,14 +518,12 @@ function ToggleRow({
         )}
       </div>
       <span
-        className={`mt-0.5 grid h-6 w-10 flex-shrink-0 place-items-start rounded-full p-0.5 transition ${
-          value ? "bg-brand-600" : "bg-ink-200"
-        }`}
+        className={`mt-0.5 grid h-6 w-10 flex-shrink-0 place-items-start rounded-full p-0.5 transition ${value ? "bg-brand-600" : "bg-ink-200"
+          }`}
       >
         <span
-          className={`block h-5 w-5 rounded-full bg-white shadow transition-transform ${
-            value ? "translate-x-4" : "translate-x-0"
-          }`}
+          className={`block h-5 w-5 rounded-full bg-white shadow transition-transform ${value ? "translate-x-4" : "translate-x-0"
+            }`}
         />
       </span>
     </button>

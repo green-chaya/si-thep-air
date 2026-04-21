@@ -108,9 +108,9 @@ const WORKS: Work[] = [
     detail:
       "วางแผนตำแหน่ง BTU ให้เหมาะกับพื้นที่ในห้อง เดินท่อรางเดียวระยะไกล เก็บงานเรียบ ไม่รก",
     brand: "TCL",
-    size: "12,000",
+    size: "12,000 BTU",
     location: "บ้านพัก · ต.โคกสะอาด อ.ศรีเทพ",
-    date: "มกราคม 2568",
+    date: "มิถุนายน 2568",
     images: [
       "/works/install-03-04.JPG",
       "/works/install-03-05.JPG",
